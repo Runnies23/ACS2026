@@ -1,0 +1,1098 @@
+Switching to group 'render' and re-executing...
+True
+Checking GPU Availability...
+Torch version: 2.9.1+rocm7.1.1.git351ff442
+Is ROCm/CUDA available?: True
+Device count: 1
+/var/spool/slurm/slurmd/job02884/slurm_script: line 44: module: command not found
+-------------------------------------------
+Processing dataset: unitree_z1_stackbox
+2026-02-07 15:01:18.941164: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-02-07 15:01:18.974930: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-02-07 15:01:18.974971: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-02-07 15:01:18.976600: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-02-07 15:01:18.984941: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-02-07 15:01:19.678054: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[rank: 0] Global seed set to 123
+INFO:root:[INFO] Start Inference
+INFO:root:init valueable: 0.006742s
+/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/kornia/feature/lightglue.py:44: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @torch.cuda.amp.custom_fwd(cast_inputs=torch.float32)
+INFO:mainlogger:LatentVisualDiffusion: Running in v-prediction mode
+WARNING:xformers:WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.3.1+cu121 with CUDA 1201 (you have 2.9.1+rocm7.1.1.git351ff442)
+    Python  3.10.14 (you have 3.10.18)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/xformers/ops/swiglu_op.py:128: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(cls, ctx, x, w1, b1, w2, b2, w3, b3):
+/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/xformers/ops/swiglu_op.py:149: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(cls, ctx, dx5):
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loaded ViT-H-14 model config.
+/mnt/ASC1664/unifolm-wma-0-dual_run_workspace/ASC26-Embodied-World-Model-Optimization/ckpts/unifolm_wma_dual.ckpt
+INFO:root:load models: 33.699179s
+>>> model checkpoint loaded.
+>>> Load pre-trained model ...
+INFO:root:load model checkpoint: 23.746368s
+INFO:root:***** Configing Data *****
+>>> unitree_z1_stackbox: 1 data samples loaded.
+>>> unitree_z1_stackbox: data stats loaded.
+>>> unitree_z1_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox_v2: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: normalizer initiated.
+>>> unitree_z1_dual_arm_cleanup_pencils: 1 data samples loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: data stats loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: normalizer initiated.
+>>> unitree_g1_pack_camera: 1 data samples loaded.
+>>> unitree_g1_pack_camera: data stats loaded.
+>>> unitree_g1_pack_camera: normalizer initiated.
+>>> Dataset is successfully loaded ...
+INFO:root:load data: 0.242296s
+>>> Generate 16 frames under each generation ...
+INFO:root:set up data: 0.000032s
+INFO:root:[INFO] Start running Inference
+INFO:root:get_init_frame_path: 0.000083s
+INFO:root:mkdir: 0.005654s
+INFO:root:get_transition_path: 0.000023s
+DEBUG:h5py._conv:Creating converter from 3 to 5
+INFO:root:load file h5py: 0.009618s
+INFO:root:[INFO] start running on loop frame_stride
+INFO:root:mkdir => save dir: 0.000774s
+INFO:root:init value: 0.000008s
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 41 65536
+INFO:root:PIL open image : 0.020479s
+INFO:root:create action & state: 0.000639s
+INFO:root:normalize action - state: 0.001001s
+INFO:root:spatial_transform: 0.001251s
+INFO:root:prepare_init_input : 0.049765s
+INFO:root:init observation: 0.002452s
+INFO:root:init condition input w/ populate_queues: 0.000039s
+INFO:root:[INFO] start running on loop n_iter
+INFO:root:[INFO] start 1/12 n_iter (start with idx:1)
+INFO:root:get decision model observation: 0.032166s
+>>> Step 1: generating actions ...
+INFO:root:[INFO] Step 1: generating actions ...
+INFO:root:[INFO] IN image_guided_synthesis_sim_mode function
+INFO:root:init model & noise: 0.000450s
+INFO:root:permute image: 0.000015s
+INFO:root:rearrange image: 0.003083s
+/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/torch/nn/functional.py:6487: UserWarning: Flash Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/sdp_utils.cpp:309.)
+  attn_output = scaled_dot_product_attention(
+/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/torch/nn/functional.py:6487: UserWarning: Mem Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/sdp_utils.cpp:360.)
+  attn_output = scaled_dot_product_attention(
+INFO:root:CLIP Embedded Image: 0.879886s
+INFO:root:Projector Image model: 0.004662s
+INFO:root:[INFO] get_latent_z function
+INFO:root:get_latent_z => rearrange video: 0.000121s
+INFO:root:get_latent_z => encode_first_stage: 0.144929s
+INFO:root:get_latent_z => rearrange z: 0.000162s
+INFO:root:conditioning_key -> repeat: 0.000159s
+INFO:root:Embedded Prompt: 0.033244s
+INFO:root:Projector state: 0.000300s
+INFO:root:Projector action: 0.000245s
+INFO:root:[INFO] Apply model logic
+INFO:root:[INFO] DDIMSampler.sample
+INFO:root:prepare input of ddim_sampling: 0.022369s
+INFO:root:prepare input of feeding: 0.007426s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.391016s
+INFO:root:predict_eps_from_z_and_v: 0.017436s
+INFO:root:alphas_cumprod: 0.000002s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000582s
+INFO:root:pred_x0 : 0.000102s
+INFO:root:use_dynamic_rescale: 0.000182s
+INFO:root:tensor sqrt.quantize: 0.000144s
+INFO:root:noise_like: 0.000091s
+INFO:root:math apply: 0.000044s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.072532s
+INFO:root:predict_eps_from_z_and_v: 0.000095s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.001619s
+INFO:root:pred_x0 : 0.000092s
+INFO:root:use_dynamic_rescale: 0.000245s
+INFO:root:tensor sqrt.quantize: 0.000116s
+INFO:root:noise_like: 0.000074s
+INFO:root:math apply: 0.000039s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.049977s
+INFO:root:predict_eps_from_z_and_v: 0.000103s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000309s
+INFO:root:pred_x0 : 0.000099s
+INFO:root:use_dynamic_rescale: 0.000238s
+INFO:root:tensor sqrt.quantize: 0.000094s
+INFO:root:noise_like: 0.000069s
+INFO:root:math apply: 0.000048s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.064246s
+INFO:root:predict_eps_from_z_and_v: 0.000127s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000197s
+INFO:root:pred_x0 : 0.000116s
+INFO:root:use_dynamic_rescale: 0.000242s
+INFO:root:tensor sqrt.quantize: 0.000117s
+INFO:root:noise_like: 0.000075s
+INFO:root:math apply: 0.000048s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.065286s
+INFO:root:predict_eps_from_z_and_v: 0.000102s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000316s
+INFO:root:pred_x0 : 0.000097s
+INFO:root:use_dynamic_rescale: 0.000247s
+INFO:root:tensor sqrt.quantize: 0.000110s
+INFO:root:noise_like: 0.000073s
+INFO:root:math apply: 0.000046s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.051696s
+INFO:root:predict_eps_from_z_and_v: 0.000107s
+INFO:root:alphas_cumprod: 0.000002s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000372s
+INFO:root:pred_x0 : 0.000103s
+INFO:root:use_dynamic_rescale: 0.000360s
+INFO:root:tensor sqrt.quantize: 0.000110s
+INFO:root:noise_like: 0.000073s
+INFO:root:math apply: 0.000045s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.048888s
+INFO:root:predict_eps_from_z_and_v: 0.000093s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.002067s
+INFO:root:pred_x0 : 0.000178s
+INFO:root:use_dynamic_rescale: 0.000248s
+INFO:root:tensor sqrt.quantize: 0.000100s
+INFO:root:noise_like: 0.000077s
+INFO:root:math apply: 0.000039s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.058022s
+INFO:root:predict_eps_from_z_and_v: 0.000128s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000003s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000003s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000699s
+INFO:root:pred_x0 : 0.000275s
+INFO:root:use_dynamic_rescale: 0.000273s
+INFO:root:tensor sqrt.quantize: 0.000144s
+INFO:root:noise_like: 0.000090s
+INFO:root:math apply: 0.000042s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.065647s
+INFO:root:predict_eps_from_z_and_v: 0.000099s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000211s
+INFO:root:pred_x0 : 0.000178s
+INFO:root:use_dynamic_rescale: 0.000259s
+INFO:root:tensor sqrt.quantize: 0.000104s
+INFO:root:noise_like: 0.000076s
+INFO:root:math apply: 0.000040s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.080065s
+INFO:root:predict_eps_from_z_and_v: 0.000130s
+INFO:root:alphas_cumprod: 0.000004s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000361s
+INFO:root:pred_x0 : 0.000189s
+INFO:root:use_dynamic_rescale: 0.000257s
+INFO:root:tensor sqrt.quantize: 0.000129s
+INFO:root:noise_like: 0.000106s
+INFO:root:math apply: 0.000039s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.052450s
+INFO:root:predict_eps_from_z_and_v: 0.000108s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000245s
+INFO:root:pred_x0 : 0.000117s
+INFO:root:use_dynamic_rescale: 0.000244s
+INFO:root:tensor sqrt.quantize: 0.000099s
+INFO:root:noise_like: 0.000090s
+INFO:root:math apply: 0.000043s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.060544s
+INFO:root:predict_eps_from_z_and_v: 0.000126s
+INFO:root:alphas_cumprod: 0.000005s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000315s
+INFO:root:pred_x0 : 0.000095s
+INFO:root:use_dynamic_rescale: 0.000241s
+INFO:root:tensor sqrt.quantize: 0.000129s
+INFO:root:noise_like: 0.000085s
+INFO:root:math apply: 0.000041s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.068712s
+INFO:root:predict_eps_from_z_and_v: 0.000117s
+INFO:root:alphas_cumprod: 0.000002s
+INFO:root:alphas_cumprod_prev: 0.000002s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000363s
+INFO:root:pred_x0 : 0.000143s
+INFO:root:use_dynamic_rescale: 0.000291s
+INFO:root:tensor sqrt.quantize: 0.000133s
+INFO:root:noise_like: 0.000101s
+INFO:root:math apply: 0.000061s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.050424s
+INFO:root:predict_eps_from_z_and_v: 0.000120s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000333s
+INFO:root:pred_x0 : 0.000097s
+INFO:root:use_dynamic_rescale: 0.000255s
+INFO:root:tensor sqrt.quantize: 0.000104s
+INFO:root:noise_like: 0.000075s
+INFO:root:math apply: 0.000042s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.049194s
+INFO:root:predict_eps_from_z_and_v: 0.000105s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000002s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000405s
+INFO:root:pred_x0 : 0.000109s
+INFO:root:use_dynamic_rescale: 0.000265s
+INFO:root:tensor sqrt.quantize: 0.000108s
+INFO:root:noise_like: 0.000077s
+INFO:root:math apply: 0.000052s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.047700s
+INFO:root:predict_eps_from_z_and_v: 0.000137s
+INFO:root:alphas_cumprod: 0.000002s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000380s
+INFO:root:pred_x0 : 0.000095s
+INFO:root:use_dynamic_rescale: 0.000252s
+INFO:root:tensor sqrt.quantize: 0.000103s
+INFO:root:noise_like: 0.000071s
+INFO:root:math apply: 0.000041s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.052584s
+INFO:root:predict_eps_from_z_and_v: 0.000098s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.001071s
+INFO:root:pred_x0 : 0.000092s
+INFO:root:use_dynamic_rescale: 0.000244s
+INFO:root:tensor sqrt.quantize: 0.000106s
+INFO:root:noise_like: 0.000069s
+INFO:root:math apply: 0.000040s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.050929s
+INFO:root:predict_eps_from_z_and_v: 0.000103s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000298s
+INFO:root:pred_x0 : 0.000093s
+INFO:root:use_dynamic_rescale: 0.000246s
+INFO:root:tensor sqrt.quantize: 0.000120s
+INFO:root:noise_like: 0.000299s
+INFO:root:math apply: 0.000137s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.060213s
+INFO:root:predict_eps_from_z_and_v: 0.000134s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.001936s
+INFO:root:pred_x0 : 0.000203s
+INFO:root:use_dynamic_rescale: 0.000250s
+INFO:root:tensor sqrt.quantize: 0.000103s
+INFO:root:noise_like: 0.000075s
+INFO:root:math apply: 0.000043s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.061293s
+INFO:root:predict_eps_from_z_and_v: 0.000104s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000000s
+INFO:root:create empty tensor : 0.000324s
+INFO:root:pred_x0 : 0.000233s
+INFO:root:use_dynamic_rescale: 0.000270s
+INFO:root:tensor sqrt.quantize: 0.000097s
+INFO:root:noise_like: 0.000069s
+INFO:root:math apply: 0.000038s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.062047s
+INFO:root:predict_eps_from_z_and_v: 0.000103s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000690s
+INFO:root:pred_x0 : 0.000203s
+INFO:root:use_dynamic_rescale: 0.000329s
+INFO:root:tensor sqrt.quantize: 0.000111s
+INFO:root:noise_like: 0.000078s
+INFO:root:math apply: 0.000214s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.044757s
+INFO:root:predict_eps_from_z_and_v: 0.000097s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.001365s
+INFO:root:pred_x0 : 0.000130s
+INFO:root:use_dynamic_rescale: 0.000297s
+INFO:root:tensor sqrt.quantize: 0.000104s
+INFO:root:noise_like: 0.000070s
+INFO:root:math apply: 0.000043s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.050992s
+INFO:root:predict_eps_from_z_and_v: 0.000102s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000327s
+INFO:root:pred_x0 : 0.000214s
+INFO:root:use_dynamic_rescale: 0.000254s
+INFO:root:tensor sqrt.quantize: 0.000102s
+INFO:root:noise_like: 0.000069s
+INFO:root:math apply: 0.000042s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.066375s
+INFO:root:predict_eps_from_z_and_v: 0.000104s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000311s
+INFO:root:pred_x0 : 0.000103s
+INFO:root:use_dynamic_rescale: 0.000239s
+INFO:root:tensor sqrt.quantize: 0.000093s
+INFO:root:noise_like: 0.000068s
+INFO:root:math apply: 0.000038s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.057448s
+INFO:root:predict_eps_from_z_and_v: 0.000108s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000351s
+INFO:root:pred_x0 : 0.000106s
+INFO:root:use_dynamic_rescale: 0.000238s
+INFO:root:tensor sqrt.quantize: 0.000098s
+INFO:root:noise_like: 0.000072s
+INFO:root:math apply: 0.000047s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.055253s
+INFO:root:predict_eps_from_z_and_v: 0.000103s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.001897s
+INFO:root:pred_x0 : 0.000120s
+INFO:root:use_dynamic_rescale: 0.000250s
+INFO:root:tensor sqrt.quantize: 0.000108s
+INFO:root:noise_like: 0.000076s
+INFO:root:math apply: 0.000054s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.062367s
+INFO:root:predict_eps_from_z_and_v: 0.000108s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000330s
+INFO:root:pred_x0 : 0.000107s
+INFO:root:use_dynamic_rescale: 0.000262s
+INFO:root:tensor sqrt.quantize: 0.000105s
+INFO:root:noise_like: 0.000074s
+INFO:root:math apply: 0.000047s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.067951s
+INFO:root:predict_eps_from_z_and_v: 0.000106s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000315s
+INFO:root:pred_x0 : 0.000101s
+INFO:root:use_dynamic_rescale: 0.000257s
+INFO:root:tensor sqrt.quantize: 0.000102s
+INFO:root:noise_like: 0.000071s
+INFO:root:math apply: 0.000041s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.060899s
+INFO:root:predict_eps_from_z_and_v: 0.000106s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000324s
+INFO:root:pred_x0 : 0.000096s
+INFO:root:use_dynamic_rescale: 0.000251s
+INFO:root:tensor sqrt.quantize: 0.000093s
+INFO:root:noise_like: 0.000068s
+INFO:root:math apply: 0.000039s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.063133s
+INFO:root:predict_eps_from_z_and_v: 0.000107s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000312s
+INFO:root:pred_x0 : 0.000096s
+INFO:root:use_dynamic_rescale: 0.000264s
+INFO:root:tensor sqrt.quantize: 0.000104s
+INFO:root:noise_like: 0.000084s
+INFO:root:math apply: 0.000047s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.063749s
+INFO:root:predict_eps_from_z_and_v: 0.000261s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000315s
+INFO:root:pred_x0 : 0.000105s
+INFO:root:use_dynamic_rescale: 0.000253s
+INFO:root:tensor sqrt.quantize: 0.000102s
+INFO:root:noise_like: 0.000070s
+INFO:root:math apply: 0.000041s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.063474s
+INFO:root:predict_eps_from_z_and_v: 0.000100s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000312s
+INFO:root:pred_x0 : 0.000229s
+INFO:root:use_dynamic_rescale: 0.000241s
+INFO:root:tensor sqrt.quantize: 0.000095s
+INFO:root:noise_like: 0.000067s
+INFO:root:math apply: 0.000038s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.065764s
+INFO:root:predict_eps_from_z_and_v: 0.000103s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000317s
+INFO:root:pred_x0 : 0.000226s
+INFO:root:use_dynamic_rescale: 0.000245s
+INFO:root:tensor sqrt.quantize: 0.000095s
+INFO:root:noise_like: 0.000067s
+INFO:root:math apply: 0.000036s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.048398s
+INFO:root:predict_eps_from_z_and_v: 0.000105s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000407s
+INFO:root:pred_x0 : 0.000112s
+INFO:root:use_dynamic_rescale: 0.000274s
+INFO:root:tensor sqrt.quantize: 0.000103s
+INFO:root:noise_like: 0.000070s
+INFO:root:math apply: 0.000040s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.058508s
+INFO:root:predict_eps_from_z_and_v: 0.000114s
+INFO:root:alphas_cumprod: 0.000002s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000332s
+INFO:root:pred_x0 : 0.000118s
+INFO:root:use_dynamic_rescale: 0.000370s
+INFO:root:tensor sqrt.quantize: 0.000154s
+INFO:root:noise_like: 0.000073s
+INFO:root:math apply: 0.000042s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.055290s
+INFO:root:predict_eps_from_z_and_v: 0.000103s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000372s
+INFO:root:pred_x0 : 0.000092s
+INFO:root:use_dynamic_rescale: 0.000239s
+INFO:root:tensor sqrt.quantize: 0.000099s
+INFO:root:noise_like: 0.000071s
+INFO:root:math apply: 0.000040s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.060109s
+INFO:root:predict_eps_from_z_and_v: 0.000109s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000320s
+INFO:root:pred_x0 : 0.000114s
+INFO:root:use_dynamic_rescale: 0.000239s
+INFO:root:tensor sqrt.quantize: 0.000139s
+INFO:root:noise_like: 0.000075s
+INFO:root:math apply: 0.000044s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.062736s
+INFO:root:predict_eps_from_z_and_v: 0.000132s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000352s
+INFO:root:pred_x0 : 0.000105s
+INFO:root:use_dynamic_rescale: 0.000274s
+INFO:root:tensor sqrt.quantize: 0.000105s
+INFO:root:noise_like: 0.000074s
+INFO:root:math apply: 0.000039s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.056730s
+INFO:root:predict_eps_from_z_and_v: 0.000101s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.001969s
+INFO:root:pred_x0 : 0.000094s
+INFO:root:use_dynamic_rescale: 0.000242s
+INFO:root:tensor sqrt.quantize: 0.000103s
+INFO:root:noise_like: 0.000073s
+INFO:root:math apply: 0.000045s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.066477s
+INFO:root:predict_eps_from_z_and_v: 0.000102s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000184s
+INFO:root:pred_x0 : 0.000093s
+INFO:root:use_dynamic_rescale: 0.000243s
+INFO:root:tensor sqrt.quantize: 0.000123s
+INFO:root:noise_like: 0.000078s
+INFO:root:math apply: 0.000044s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.056845s
+INFO:root:predict_eps_from_z_and_v: 0.000101s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000842s
+INFO:root:pred_x0 : 0.000098s
+INFO:root:use_dynamic_rescale: 0.000240s
+INFO:root:tensor sqrt.quantize: 0.000104s
+INFO:root:noise_like: 0.000086s
+INFO:root:math apply: 0.000050s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.063793s
+INFO:root:predict_eps_from_z_and_v: 0.000104s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000211s
+INFO:root:pred_x0 : 0.000103s
+INFO:root:use_dynamic_rescale: 0.000241s
+INFO:root:tensor sqrt.quantize: 0.000101s
+INFO:root:noise_like: 0.000073s
+INFO:root:math apply: 0.000051s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.056433s
+INFO:root:predict_eps_from_z_and_v: 0.000138s
+INFO:root:alphas_cumprod: 0.000005s
+INFO:root:alphas_cumprod_prev: 0.000002s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000002s
+INFO:root:create empty tensor : 0.000544s
+INFO:root:pred_x0 : 0.000602s
+INFO:root:use_dynamic_rescale: 0.000428s
+INFO:root:tensor sqrt.quantize: 0.000138s
+INFO:root:noise_like: 0.000079s
+INFO:root:math apply: 0.000051s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.054804s
+INFO:root:predict_eps_from_z_and_v: 0.000100s
+INFO:root:alphas_cumprod: 0.000002s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000391s
+INFO:root:pred_x0 : 0.000360s
+INFO:root:use_dynamic_rescale: 0.000247s
+INFO:root:tensor sqrt.quantize: 0.000113s
+INFO:root:noise_like: 0.000087s
+INFO:root:math apply: 0.000042s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.060822s
+INFO:root:predict_eps_from_z_and_v: 0.000099s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000002s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.001251s
+INFO:root:pred_x0 : 0.000362s
+INFO:root:use_dynamic_rescale: 0.000267s
+INFO:root:tensor sqrt.quantize: 0.000110s
+INFO:root:noise_like: 0.000100s
+INFO:root:math apply: 0.000058s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.054013s
+INFO:root:predict_eps_from_z_and_v: 0.000106s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.002171s
+INFO:root:pred_x0 : 0.000317s
+INFO:root:use_dynamic_rescale: 0.000242s
+INFO:root:tensor sqrt.quantize: 0.000109s
+INFO:root:noise_like: 0.000074s
+INFO:root:math apply: 0.000043s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.060073s
+INFO:root:predict_eps_from_z_and_v: 0.000099s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000328s
+INFO:root:pred_x0 : 0.000331s
+INFO:root:use_dynamic_rescale: 0.000246s
+INFO:root:tensor sqrt.quantize: 0.000102s
+INFO:root:noise_like: 0.000073s
+INFO:root:math apply: 0.000058s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.055335s
+INFO:root:predict_eps_from_z_and_v: 0.000095s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.001935s
+INFO:root:pred_x0 : 0.000094s
+INFO:root:use_dynamic_rescale: 0.000237s
+INFO:root:tensor sqrt.quantize: 0.000113s
+INFO:root:noise_like: 0.000094s
+INFO:root:math apply: 0.000096s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.054931s
+INFO:root:predict_eps_from_z_and_v: 0.000101s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.002296s
+INFO:root:pred_x0 : 0.000091s
+INFO:root:use_dynamic_rescale: 0.000263s
+INFO:root:tensor sqrt.quantize: 0.000101s
+INFO:root:noise_like: 0.000071s
+INFO:root:math apply: 0.000039s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.061734s
+INFO:root:predict_eps_from_z_and_v: 0.000105s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.001654s
+INFO:root:pred_x0 : 0.000105s
+INFO:root:use_dynamic_rescale: 0.000250s
+INFO:root:tensor sqrt.quantize: 0.000110s
+INFO:root:noise_like: 0.000078s
+INFO:root:math apply: 0.000046s
+INFO:root:[INFO] Done ddim_sampler.sample
+INFO:root:model.decode_first_stage: 0.225262s
+INFO:root:[INFO] Done image_guided_synthesis_sim_mode function
+INFO:root:update condition input w/ populate_queues: 0.000015s
+INFO:root:update condition input w/ populate_queues: 0.000002s
+INFO:root:update condition input w/ populate_queues: 0.000002s
+INFO:root:update condition input w/ populate_queues: 0.000002s
+INFO:root:update condition input w/ populate_queues: 0.000002s
+INFO:root:update condition input w/ populate_queues: 0.000001s
+INFO:root:update condition input w/ populate_queues: 0.000001s
+INFO:root:update condition input w/ populate_queues: 0.000001s
+INFO:root:update condition input w/ populate_queues: 0.000001s
+INFO:root:update condition input w/ populate_queues: 0.000002s
+INFO:root:update condition input w/ populate_queues: 0.000002s
+INFO:root:update condition input w/ populate_queues: 0.000002s
+INFO:root:update condition input w/ populate_queues: 0.000001s
+INFO:root:update condition input w/ populate_queues: 0.000002s
+INFO:root:update condition input w/ populate_queues: 0.000001s
+INFO:root:update condition input w/ populate_queues: 0.000023s
+INFO:root:updateing observation by decesion model action output: 0.048834s
+>>> Step 1: interacting with world model ...
+INFO:root:[INFO] Step 1: interacting with world model ...
+INFO:root:[INFO] IN image_guided_synthesis_sim_mode function
+INFO:root:init model & noise: 0.569535s
+INFO:root:permute image: 0.000043s
+INFO:root:rearrange image: 0.000083s
+INFO:root:CLIP Embedded Image: 0.017034s
+INFO:root:Projector Image model: 0.002436s
+INFO:root:[INFO] get_latent_z function
+INFO:root:get_latent_z => rearrange video: 0.000137s
+INFO:root:get_latent_z => encode_first_stage: 0.126489s
+INFO:root:get_latent_z => rearrange z: 0.000079s
+INFO:root:conditioning_key -> repeat: 0.000057s
+INFO:root:Embedded Prompt: 0.012977s
+INFO:root:Projector state: 0.000224s
+INFO:root:Projector action: 0.000176s
+INFO:root:[INFO] Apply model logic
+INFO:root:[INFO] DDIMSampler.sample
+INFO:root:prepare input of ddim_sampling: 0.001689s
+INFO:root:prepare input of feeding: 0.000068s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.069490s
+INFO:root:predict_eps_from_z_and_v: 0.000346s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000352s
+INFO:root:pred_x0 : 0.000224s
+INFO:root:use_dynamic_rescale: 0.000254s
+INFO:root:tensor sqrt.quantize: 0.000149s
+INFO:root:noise_like: 0.000100s
+INFO:root:math apply: 0.000055s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.121423s
+INFO:root:predict_eps_from_z_and_v: 0.000179s
+INFO:root:alphas_cumprod: 0.000006s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000421s
+INFO:root:pred_x0 : 0.000404s
+INFO:root:use_dynamic_rescale: 0.000264s
+INFO:root:tensor sqrt.quantize: 0.000242s
+INFO:root:noise_like: 0.000143s
+INFO:root:math apply: 0.000043s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.070213s
+INFO:root:predict_eps_from_z_and_v: 0.000124s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000008s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000372s
+INFO:root:pred_x0 : 0.000369s
+INFO:root:use_dynamic_rescale: 0.000268s
+INFO:root:tensor sqrt.quantize: 0.000138s
+INFO:root:noise_like: 0.000100s
+INFO:root:math apply: 0.000042s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.074669s
+INFO:root:predict_eps_from_z_and_v: 0.000170s
+INFO:root:alphas_cumprod: 0.000003s
+INFO:root:alphas_cumprod_prev: 0.000008s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.001105s
+INFO:root:pred_x0 : 0.000356s
+INFO:root:use_dynamic_rescale: 0.000258s
+INFO:root:tensor sqrt.quantize: 0.000250s
+INFO:root:noise_like: 0.000095s
+INFO:root:math apply: 0.000054s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.075351s
+INFO:root:predict_eps_from_z_and_v: 0.000104s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000352s
+INFO:root:pred_x0 : 0.000293s
+INFO:root:use_dynamic_rescale: 0.000257s
+INFO:root:tensor sqrt.quantize: 0.000114s
+INFO:root:noise_like: 0.000085s
+INFO:root:math apply: 0.000048s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.044178s
+INFO:root:predict_eps_from_z_and_v: 0.000102s
+INFO:root:alphas_cumprod: 0.000002s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000451s
+INFO:root:pred_x0 : 0.000100s
+INFO:root:use_dynamic_rescale: 0.000244s
+INFO:root:tensor sqrt.quantize: 0.000105s
+INFO:root:noise_like: 0.000074s
+INFO:root:math apply: 0.000041s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.048769s
+INFO:root:predict_eps_from_z_and_v: 0.000108s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000406s
+INFO:root:pred_x0 : 0.000116s
+INFO:root:use_dynamic_rescale: 0.000249s
+INFO:root:tensor sqrt.quantize: 0.000114s
+INFO:root:noise_like: 0.000075s
+INFO:root:math apply: 0.000052s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.054707s
+INFO:root:predict_eps_from_z_and_v: 0.000123s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.002673s
+INFO:root:pred_x0 : 0.000101s
+INFO:root:use_dynamic_rescale: 0.000336s
+INFO:root:tensor sqrt.quantize: 0.000145s
+INFO:root:noise_like: 0.000089s
+INFO:root:math apply: 0.000047s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.060266s
+INFO:root:predict_eps_from_z_and_v: 0.000111s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000181s
+INFO:root:pred_x0 : 0.000094s
+INFO:root:use_dynamic_rescale: 0.000237s
+INFO:root:tensor sqrt.quantize: 0.000110s
+INFO:root:noise_like: 0.000078s
+INFO:root:math apply: 0.000045s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.059490s
+INFO:root:predict_eps_from_z_and_v: 0.000117s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000408s
+INFO:root:pred_x0 : 0.000149s
+INFO:root:use_dynamic_rescale: 0.000268s
+INFO:root:tensor sqrt.quantize: 0.000124s
+INFO:root:noise_like: 0.000086s
+INFO:root:math apply: 0.000054s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.063111s
+INFO:root:predict_eps_from_z_and_v: 0.000102s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000342s
+INFO:root:pred_x0 : 0.000094s
+INFO:root:use_dynamic_rescale: 0.000240s
+INFO:root:tensor sqrt.quantize: 0.000104s
+INFO:root:noise_like: 0.000077s
+INFO:root:math apply: 0.000042s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.061706s
+INFO:root:predict_eps_from_z_and_v: 0.000104s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000233s
+INFO:root:pred_x0 : 0.000114s
+INFO:root:use_dynamic_rescale: 0.000243s
+INFO:root:tensor sqrt.quantize: 0.000107s
+INFO:root:noise_like: 0.000086s
+INFO:root:math apply: 0.000049s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.058358s
+INFO:root:predict_eps_from_z_and_v: 0.000138s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000310s
+INFO:root:pred_x0 : 0.000089s
+INFO:root:use_dynamic_rescale: 0.000236s
+INFO:root:tensor sqrt.quantize: 0.000093s
+INFO:root:noise_like: 0.000066s
+INFO:root:math apply: 0.000036s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.064371s
+INFO:root:predict_eps_from_z_and_v: 0.000096s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000321s
+INFO:root:pred_x0 : 0.000261s
+INFO:root:use_dynamic_rescale: 0.000239s
+INFO:root:tensor sqrt.quantize: 0.000092s
+INFO:root:noise_like: 0.000067s
+INFO:root:math apply: 0.000044s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.072271s
+INFO:root:predict_eps_from_z_and_v: 0.000100s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000329s
+INFO:root:pred_x0 : 0.000244s
+INFO:root:use_dynamic_rescale: 0.000244s
+INFO:root:tensor sqrt.quantize: 0.000121s
+INFO:root:noise_like: 0.000083s
+INFO:root:math apply: 0.000042s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.062568s
+INFO:root:predict_eps_from_z_and_v: 0.000103s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000548s
+INFO:root:pred_x0 : 0.000092s
+INFO:root:use_dynamic_rescale: 0.000239s
+INFO:root:tensor sqrt.quantize: 0.000095s
+INFO:root:noise_like: 0.000068s
+INFO:root:math apply: 0.000063s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.066629s
+INFO:root:predict_eps_from_z_and_v: 0.000098s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.002182s
+INFO:root:pred_x0 : 0.000281s
+INFO:root:use_dynamic_rescale: 0.000267s
+INFO:root:tensor sqrt.quantize: 0.000107s
+INFO:root:noise_like: 0.000081s
+INFO:root:math apply: 0.000043s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.057289s
+INFO:root:predict_eps_from_z_and_v: 0.000102s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.002924s
+INFO:root:pred_x0 : 0.000102s
+INFO:root:use_dynamic_rescale: 0.000240s
+INFO:root:tensor sqrt.quantize: 0.000104s
+INFO:root:noise_like: 0.000070s
+INFO:root:math apply: 0.000041s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.045611s
+INFO:root:predict_eps_from_z_and_v: 0.000092s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.003193s
+INFO:root:pred_x0 : 0.000087s
+INFO:root:use_dynamic_rescale: 0.000233s
+INFO:root:tensor sqrt.quantize: 0.000088s
+INFO:root:noise_like: 0.000077s
+INFO:root:math apply: 0.000038s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.061843s
+INFO:root:predict_eps_from_z_and_v: 0.000103s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000301s
+INFO:root:pred_x0 : 0.000087s
+INFO:root:use_dynamic_rescale: 0.000236s
+INFO:root:tensor sqrt.quantize: 0.000089s
+INFO:root:noise_like: 0.000069s
+INFO:root:math apply: 0.000035s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.066029s
+INFO:root:predict_eps_from_z_and_v: 0.000256s
+INFO:root:alphas_cumprod: 0.000002s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000467s
+INFO:root:pred_x0 : 0.000200s
+INFO:root:use_dynamic_rescale: 0.000416s
+INFO:root:tensor sqrt.quantize: 0.000270s
+INFO:root:noise_like: 0.000111s
+INFO:root:math apply: 0.000049s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.064483s
+INFO:root:predict_eps_from_z_and_v: 0.000245s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000509s
+INFO:root:pred_x0 : 0.000256s
+INFO:root:use_dynamic_rescale: 0.000318s
+INFO:root:tensor sqrt.quantize: 0.000133s
+INFO:root:noise_like: 0.000097s
+INFO:root:math apply: 0.000074s
+INFO:root:[INFO] p_sample_ddim
+INFO:root:unconditional_conditioning: 3.060417s
+INFO:root:predict_eps_from_z_and_v: 0.000140s
+INFO:root:alphas_cumprod: 0.000001s
+INFO:root:alphas_cumprod_prev: 0.000001s
+INFO:root:sqrt_one_minus_alphas_cumprod: 0.000001s
+INFO:root:ddim_sigmas_for_original_num_steps: 0.000001s
+INFO:root:create empty tensor : 0.000383s
+INFO:root:pred_x0 : 0.000133s
+INFO:root:use_dynamic_rescale: 0.000257s
+INFO:root:tensor sqrt.quantize: 0.000113s
+INFO:root:noise_like: 0.000088s
+INFO:root:math apply: 0.000056s
+INFO:root:[INFO] p_sample_ddim
+slurmstepd-wx-ms-w7900d-0032: error: *** JOB 2884 ON wx-ms-w7900d-0032 CANCELLED AT 2026-02-07T15:06:08 ***

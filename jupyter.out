@@ -1,0 +1,121 @@
+Switching to group 'render' and re-executing...
+True
+[I 2026-02-08 14:40:47.847 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2026-02-08 14:40:47.851 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2026-02-08 14:40:47.854 ServerApp] jupyterlab | extension was successfully linked.
+[I 2026-02-08 14:40:47.857 ServerApp] notebook | extension was successfully linked.
+[I 2026-02-08 14:40:48.493 ServerApp] notebook_shim | extension was successfully linked.
+[I 2026-02-08 14:40:48.538 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2026-02-08 14:40:48.539 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2026-02-08 14:40:48.547 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2026-02-08 14:40:48.558 LabApp] JupyterLab extension loaded from /mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/jupyterlab
+[I 2026-02-08 14:40:48.558 LabApp] JupyterLab application directory is /mnt/ASC1664/miniconda3/envs/unifolm-wma/share/jupyter/lab
+[I 2026-02-08 14:40:48.559 LabApp] Extension Manager is 'pypi'.
+[I 2026-02-08 14:40:48.624 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2026-02-08 14:40:48.626 ServerApp] notebook | extension was successfully loaded.
+[I 2026-02-08 14:40:48.627 ServerApp] Serving notebooks from local directory: /mnt/ASC1664/unifolm-wma-0-dual_run_workspace
+[I 2026-02-08 14:40:48.627 ServerApp] Jupyter Server 2.17.0 is running at:
+[I 2026-02-08 14:40:48.627 ServerApp] http://wx-ms-w7900d-0032:8888/tree?token=f6f3c9855298701197392228255818eb3cf117022dee1c11
+[I 2026-02-08 14:40:48.627 ServerApp]     http://127.0.0.1:8888/tree?token=f6f3c9855298701197392228255818eb3cf117022dee1c11
+[I 2026-02-08 14:40:48.627 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2026-02-08 14:40:48.630 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/ASC1664/.local/share/jupyter/runtime/jpserver-3487423-open.html
+    Or copy and paste one of these URLs:
+        http://wx-ms-w7900d-0032:8888/tree?token=f6f3c9855298701197392228255818eb3cf117022dee1c11
+        http://127.0.0.1:8888/tree?token=f6f3c9855298701197392228255818eb3cf117022dee1c11
+[I 2026-02-08 14:40:48.656 ServerApp] Skipped non-installed server(s): basedpyright, bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyrefly, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2026-02-08 14:45:12.671 ServerApp] 302 GET / (@10.5.10.45) 0.53ms
+[I 2026-02-08 14:45:13.013 JupyterNotebookApp] 302 GET /tree? (@10.5.10.45) 0.76ms
+[W 2026-02-08 14:45:32.509 ServerApp] 401 POST /login?next=%2Ftree%3F (@10.5.10.45) 1.25ms referer=http://localhost:8888/login?next=%2Ftree%3F
+[I 2026-02-08 14:47:16.871 ServerApp] Creating new notebook in 
+[I 2026-02-08 14:47:16.896 ServerApp] Writing notebook-signing key to /home/ASC1664/.local/share/jupyter/notebook_secret
+[I 2026-02-08 14:47:19.356 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-08 14:47:19.368 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-08 14:47:19.699 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-08 14:47:19.741 ServerApp] Kernel started: 9b11878d-b31f-4433-b52e-a27a928e4241
+[IPKernelApp] WARNING | File not found: '/home/ASC1664/.vscode-server/data/User/workspaceStorage/cd39044701d6313a71d0d8237c95336d/ms-python.python/pythonrc.py'
+[I 2026-02-08 14:47:21.795 ServerApp] Adapting from protocol version 5.3 (kernel 9b11878d-b31f-4433-b52e-a27a928e4241) to 5.4 (client).
+[I 2026-02-08 14:47:21.796 ServerApp] Connecting to kernel 9b11878d-b31f-4433-b52e-a27a928e4241.
+[W 2026-02-08 14:47:21.797 ServerApp] The websocket_ping_timeout (90000) cannot be longer than the websocket_ping_interval (30000).
+    Setting websocket_ping_timeout=30000
+[I 2026-02-08 14:47:23.168 ServerApp] Starting buffering for 9b11878d-b31f-4433-b52e-a27a928e4241:f24e42c2-dd39-40a1-8134-f2d2ea3f103e
+[I 2026-02-08 14:47:23.552 ServerApp] Adapting from protocol version 5.3 (kernel 9b11878d-b31f-4433-b52e-a27a928e4241) to 5.4 (client).
+[I 2026-02-08 14:47:23.553 ServerApp] Connecting to kernel 9b11878d-b31f-4433-b52e-a27a928e4241.
+[I 2026-02-08 14:47:24.235 ServerApp] Starting buffering for 9b11878d-b31f-4433-b52e-a27a928e4241:2a0017e8-0776-47e8-b96e-373f5df09582
+[I 2026-02-08 14:47:25.025 ServerApp] Adapting from protocol version 5.3 (kernel 9b11878d-b31f-4433-b52e-a27a928e4241) to 5.4 (client).
+[I 2026-02-08 14:47:25.025 ServerApp] Connecting to kernel 9b11878d-b31f-4433-b52e-a27a928e4241.
+[I 2026-02-08 14:49:24.427 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-08 14:51:20.907 ServerApp] Adapting from protocol version 5.3 (kernel 9b11878d-b31f-4433-b52e-a27a928e4241) to 5.4 (client).
+[I 2026-02-08 14:51:20.913 ServerApp] Connecting to kernel 9b11878d-b31f-4433-b52e-a27a928e4241.
+[I 2026-02-08 14:51:25.785 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-08 14:53:05.442 ServerApp] New terminal with automatic name: 1
+[I 2026-02-08 14:53:08.719 ServerApp] Adapting from protocol version 5.3 (kernel 9b11878d-b31f-4433-b52e-a27a928e4241) to 5.4 (client).
+[I 2026-02-08 14:53:08.719 ServerApp] Connecting to kernel 9b11878d-b31f-4433-b52e-a27a928e4241.
+[I 2026-02-08 14:53:27.464 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-08 14:53:28.867 ServerApp] Kernel restarted: 9b11878d-b31f-4433-b52e-a27a928e4241
+[IPKernelApp] WARNING | File not found: '/home/ASC1664/.vscode-server/data/User/workspaceStorage/cd39044701d6313a71d0d8237c95336d/ms-python.python/pythonrc.py'
+[I 2026-02-08 14:53:29.514 ServerApp] Adapting from protocol version 5.3 (kernel 9b11878d-b31f-4433-b52e-a27a928e4241) to 5.4 (client).
+[I 2026-02-08 14:53:29.515 ServerApp] Connecting to kernel 9b11878d-b31f-4433-b52e-a27a928e4241.
+[I 2026-02-08 14:55:01.795 ServerApp] New terminal with automatic name: 2
+[I 2026-02-08 14:55:07.657 ServerApp] Adapting from protocol version 5.3 (kernel 9b11878d-b31f-4433-b52e-a27a928e4241) to 5.4 (client).
+[I 2026-02-08 14:55:07.658 ServerApp] Connecting to kernel 9b11878d-b31f-4433-b52e-a27a928e4241.
+[I 2026-02-08 14:55:30.325 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-08 14:57:32.217 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-08 14:58:50.223 ServerApp] Creating new notebook in 
+[I 2026-02-08 14:58:51.580 ServerApp] Saving file at /Untitled1.ipynb
+[I 2026-02-08 14:58:51.755 ServerApp] Kernel started: 8ad8596f-6ecb-404f-bc9c-1aaf9f3321d3
+[IPKernelApp] WARNING | File not found: '/home/ASC1664/.vscode-server/data/User/workspaceStorage/cd39044701d6313a71d0d8237c95336d/ms-python.python/pythonrc.py'
+[I 2026-02-08 14:58:53.075 ServerApp] Adapting from protocol version 5.3 (kernel 8ad8596f-6ecb-404f-bc9c-1aaf9f3321d3) to 5.4 (client).
+[I 2026-02-08 14:58:53.075 ServerApp] Connecting to kernel 8ad8596f-6ecb-404f-bc9c-1aaf9f3321d3.
+[I 2026-02-08 14:58:55.330 ServerApp] Adapting from protocol version 5.3 (kernel 9b11878d-b31f-4433-b52e-a27a928e4241) to 5.4 (client).
+[I 2026-02-08 14:58:55.332 ServerApp] Connecting to kernel 9b11878d-b31f-4433-b52e-a27a928e4241.
+[I 2026-02-08 14:58:55.928 ServerApp] Adapting from protocol version 5.3 (kernel 8ad8596f-6ecb-404f-bc9c-1aaf9f3321d3) to 5.4 (client).
+[I 2026-02-08 14:58:55.928 ServerApp] Connecting to kernel 8ad8596f-6ecb-404f-bc9c-1aaf9f3321d3.
+[I 2026-02-08 14:58:58.474 ServerApp] Adapting from protocol version 5.3 (kernel 9b11878d-b31f-4433-b52e-a27a928e4241) to 5.4 (client).
+[I 2026-02-08 14:58:58.474 ServerApp] Connecting to kernel 9b11878d-b31f-4433-b52e-a27a928e4241.
+[I 2026-02-08 14:58:58.946 ServerApp] Adapting from protocol version 5.3 (kernel 8ad8596f-6ecb-404f-bc9c-1aaf9f3321d3) to 5.4 (client).
+[I 2026-02-08 14:58:58.947 ServerApp] Connecting to kernel 8ad8596f-6ecb-404f-bc9c-1aaf9f3321d3.
+[I 2026-02-08 14:59:01.400 ServerApp] Adapting from protocol version 5.3 (kernel 8ad8596f-6ecb-404f-bc9c-1aaf9f3321d3) to 5.4 (client).
+[I 2026-02-08 14:59:01.400 ServerApp] Connecting to kernel 8ad8596f-6ecb-404f-bc9c-1aaf9f3321d3.
+[I 2026-02-08 14:59:32.984 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-08 15:00:59.235 ServerApp] Saving file at /Untitled1.ipynb
+[I 2026-02-08 15:01:35.144 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-08 15:02:58.311 ServerApp] Adapting from protocol version 5.3 (kernel 9b11878d-b31f-4433-b52e-a27a928e4241) to 5.4 (client).
+[I 2026-02-08 15:02:58.314 ServerApp] Connecting to kernel 9b11878d-b31f-4433-b52e-a27a928e4241.
+[I 2026-02-08 15:03:37.212 ServerApp] Saving file at /Untitled.ipynb
+[IPKernelApp] ERROR | Exception in message handler:
+Traceback (most recent call last):
+  File "/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/ipykernel/kernelbase.py", line 471, in dispatch_shell
+    await result
+  File "/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/ipykernel/ipkernel.py", line 366, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/ipykernel/kernelbase.py", line 850, in execute_request
+    reply_msg: dict[str, t.Any] = self.session.send(  # type:ignore[assignment]
+  File "/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/jupyter_client/session.py", line 867, in send
+    stream.send_multipart(to_send, copy=copy)
+  File "/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/zmq/sugar/socket.py", line 749, in send_multipart
+    self.send(msg, zmq.SNDMORE | flags, copy=copy, track=track)
+  File "/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/zmq/sugar/socket.py", line 698, in send
+    return super().send(data, flags=flags, copy=copy, track=track)
+  File "zmq/backend/cython/_zmq.py", line 1152, in zmq.backend.cython._zmq.Socket.send
+  File "zmq/backend/cython/_zmq.py", line 1194, in zmq.backend.cython._zmq.Socket.send
+  File "zmq/backend/cython/_zmq.py", line 1339, in zmq.backend.cython._zmq._check_closed
+zmq.error.ZMQError: Socket operation on non-socket
+[I 2026-02-08 15:04:50.509 ServerApp] Kernel restarted: 8ad8596f-6ecb-404f-bc9c-1aaf9f3321d3
+[I 2026-02-08 15:04:51.029 ServerApp] Adapting from protocol version 5.3 (kernel 8ad8596f-6ecb-404f-bc9c-1aaf9f3321d3) to 5.4 (client).
+[I 2026-02-08 15:04:51.030 ServerApp] Connecting to kernel 8ad8596f-6ecb-404f-bc9c-1aaf9f3321d3.
+[IPKernelApp] WARNING | File not found: '/home/ASC1664/.vscode-server/data/User/workspaceStorage/cd39044701d6313a71d0d8237c95336d/ms-python.python/pythonrc.py'
+[I 2026-02-08 15:05:00.880 ServerApp] Saving file at /Untitled1.ipynb
+[I 2026-02-08 15:05:34.350 ServerApp] Kernel interrupted: 9b11878d-b31f-4433-b52e-a27a928e4241
+[I 2026-02-08 15:05:40.999 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-08 15:07:04.883 ServerApp] Saving file at /Untitled1.ipynb
+[I 2026-02-08 15:08:27.544 ServerApp] Starting buffering for 9b11878d-b31f-4433-b52e-a27a928e4241:d7e533a2-e0bc-4825-9711-f68b9530fcbd
+[I 2026-02-08 15:08:27.901 ServerApp] Starting buffering for 8ad8596f-6ecb-404f-bc9c-1aaf9f3321d3:e28ba27c-8914-4826-83d2-990fa8a3bab1
+slurmstepd-wx-ms-w7900d-0032: error: *** JOB 3015 ON wx-ms-w7900d-0032 CANCELLED AT 2026-02-08T15:08:38 ***
+[C 2026-02-08 15:08:38.671 ServerApp] received signal 15, stopping
+[I 2026-02-08 15:08:38.671 ServerApp] Shutting down 5 extensions
+[I 2026-02-08 15:08:38.671 ServerApp] Shutting down 2 kernels
+[I 2026-02-08 15:08:38.672 ServerApp] Kernel shutdown: 8ad8596f-6ecb-404f-bc9c-1aaf9f3321d3
+[I 2026-02-08 15:08:38.672 ServerApp] Kernel shutdown: 9b11878d-b31f-4433-b52e-a27a928e4241
